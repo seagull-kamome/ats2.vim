@@ -26,7 +26,7 @@ syntax keyword atsKeyword castfn dataprop datatype dataview dataviewtype datavty
 syntax keyword atsKeyword extern fn fun infix infixr infixl implement of overload postfix prefix
 syntax keyword atsKeyword primplement primplmnt propdef sif sta stadef val staload symintr 
 syntax keyword atsKeyword tkindef typedef val val- val+ var view@ viewdef viewtypedef with withtype
-syntax keyword atsKeyword datasort stacst praxi and macdef
+syntax keyword atsKeyword datasort stacst praxi prfn prfun and macdef
 syntax keyword atsKeyword $extype $extval
 
 " Other keywords or otherwise common tokens
@@ -42,7 +42,14 @@ syntax keyword atsConditional case case+ case- if else then
 highlight link atsConditional Conditional
 
 " very common type and sorts
-syntax keyword atsTypes void bool int nat list list_vt string ptr addr type t@ype
+syntax keyword atsTypes void bool Bool int Int uint uInt nat Nat
+syntax keyword atsTypes uchar uChar ucharNZ schar sChar scharNZ
+syntax keyword atsTypes byte int8 Int8 uint8 uInt8 int16 Int16 uint16 uInt16
+syntax keyword atsTypes int32 Int32 uint32 uInt32 int64 Int64 uint64 uInt64
+syntax keyword atsTypes lint ulint llint ullint
+syntax keyword atsTypes intptr uintptr sint usint
+syntax keyword atsTypes size_t Size ssize_t SSize
+syntax keyword atsTypes list list_vt string ptr addr type t@ype
 highlight link atsTypes Type
 
 syn match atsModPath "\u\(\w\|'\)*\."he=e-1
